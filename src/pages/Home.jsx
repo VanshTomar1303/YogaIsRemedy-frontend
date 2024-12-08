@@ -22,8 +22,14 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-black min-h-[100vh] w-full">
-            <div className="text-white flex justify-center items-center">
+        <div 
+        style={{
+            backgroundImage: `url(https://media.istockphoto.com/id/2153282231/photo/senior-women-yoga-group-and-coach-in-meditation-peace-and-prayer-hands-in-exercise-holistic.webp?a=1&b=1&s=612x612&w=0&k=20&c=q2TZ8Hy09qAxq6Xw_UFWadkMFc20ObPRS7tu2P3bwas=)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        className="bg-black min-h-[100vh] w-full">
+            <div className="text-blue-800 flex justify-center items-center">
                 <h1 className="text-6xl font-bold p-4">Yoga Is Remedy</h1>
             </div>
             <div className="flex justify-center flex-col items-center p-4">
@@ -45,7 +51,7 @@ export default function Home() {
 
                 {/* Display loading bar while the data is being fetched */}
                 {isLoading ? (
-                    <div className="m-9 min-h-[70vh] w-[70vw] bg-slate-500 rounded-md flex justify-center items-center">
+                    <div className="m-9 min-h-[70vh] w-[70vw] backdrop-blur-sm bg-slate-500 rounded-md flex justify-center items-center">
                         <div role="status">
                             <svg aria-hidden="true" className="w-20 h-20 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor" />
@@ -55,7 +61,7 @@ export default function Home() {
                         </div>
                     </div>
                 ) : (
-                    <div className="m-9 min-h-[70vh] w-[70vw] bg-slate-500 rounded-md">
+                    <div className="m-9 min-h-[70vh] backdrop-blur-[3px] bg-white/30 w-[70vw] rounded-md">
                         <p className="p-4 text-2xl">{remedy}</p>
                     </div>
                 )}
